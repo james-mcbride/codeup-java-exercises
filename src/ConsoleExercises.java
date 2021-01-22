@@ -72,12 +72,12 @@ public class ConsoleExercises {
 //        System.out.printf("The perimeter of the room is: "+ (2*Integer.parseInt(string1)+2*Integer.parseInt(string2)));
 //
         //In your perimeter/area calculator: - Accept decimal entries. - Calculate the volume of the rooms in addition to the area and perimeter.
-//        System.out.printf("The area of the room is: "+ Double.parseDouble(string1)*Double.parseDouble(string2)+"\n");
-//        System.out.printf("The perimeter of the room is: "+ (2*Double.parseDouble(string1)+2*Double.parseDouble(string2)));
+        System.out.printf("The area of the room is: "+ Double.parseDouble(string1)*Double.parseDouble(string2)+"\n");
+        System.out.printf("The perimeter of the room is: "+ (2*Double.parseDouble(string1)+2*Double.parseDouble(string2)));
 
         //Rewrite your classroom program to use nextInt method. If you added the line of code above to your application, you should now have no trouble handling multiple pieces of user input.
-        System.out.printf("The area of the room is: "+ Integer.parseInt(string1)*Integer.parseInt(string2)+"\n");
-        System.out.printf("The perimeter of the room is: "+ (2*Integer.parseInt(string1)+2*Integer.parseInt(string2)));
+//        System.out.printf("The area of the room is: "+ Integer.parseInt(string1)*Integer.parseInt(string2)+"\n");
+//        System.out.printf("The perimeter of the room is: "+ (2*Integer.parseInt(string1)+2*Integer.parseInt(string2)));
 
 
     }
