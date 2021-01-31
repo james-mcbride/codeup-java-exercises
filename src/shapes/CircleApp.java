@@ -19,6 +19,8 @@ public class CircleApp {
         totalCircles++;
         if (response){
             CreateCircle();
+        } else{
+            System.out.println("total circles made: "+ totalCircles);
         }
     }
 
