@@ -97,7 +97,7 @@ public class Input {
 
     public double getDouble(){
         System.out.println("enter a double");
-        double input=scanner.nextDouble();
+        double input=Double.parseDouble(scanner.nextLine());
         return input;
     }
 
@@ -112,6 +112,5 @@ public class Input {
 
         this.scanner = new Scanner(System.in);
     }
-
 
 }
