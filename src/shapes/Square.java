@@ -16,14 +16,14 @@ package shapes;
         this.width=width;
      }
 
-     public double getPerimeter() {
-         return 2*length+2*width;
-     }
-
-     @Override
-     public double getArea() {
-         return length*width;
-     }
+//     public double getPerimeter() {
+//         return 2*length+2*width;
+//     }
+//
+//     @Override
+//     public double getArea() {
+//         return length*width;
+//     }
 
      //code from inheritance and polymorphism lecture
 
