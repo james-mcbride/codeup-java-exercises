@@ -45,9 +45,15 @@ public class Input {
     }
     public int getInt(int min, int max){
         System.out.println("enter a value between "+min+" and "+ max);
-        int input=scanner.nextInt();
-        if (input>=min && input<=max){
-            return input;
+        String input=scanner.nextLine();
+        int integer = 0;
+        try {
+            integer = Integer.parseInt(input);
+        } catch (NumberFormatException e){
+            System.out.println("caught a NumberFormatException exception!");
+        }
+        if (integer>=min && integer<=max){
+            return integer;
         } else{
             return getInt(min, max);
         }
@@ -87,9 +93,15 @@ public class Input {
     public double getDouble (double min, double max, String prompt){
         System.out.println(prompt);
         System.out.println("enter a value between "+min+" and "+max);
-        double input = scanner.nextDouble();
-        if (input>min && input<max){
-            return input;
+        String input = scanner.nextLine();
+        double number = 0;
+        try {
+            number = Double.parseDouble(input);
+        } catch (NumberFormatException e){
+            System.out.println("caught a NumberFormatException exception!");
+        }
+        if (number>min && number<max){
+            return number;
         } else{
             return getDouble(min, max);
         }
