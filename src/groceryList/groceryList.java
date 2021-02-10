@@ -34,21 +34,32 @@ public class groceryList {
 
 
     public void reviewCart(){
+        ArrayList<String> sortedCategories = new ArrayList<>();
         for (Map.Entry<String, ArrayList<HashMap<String, Integer>>> entry: this.categories.entrySet()) {
-            System.out.println(entry.getKey()+":");
+            sortedCategories.add(entry.getKey());
+        }
+        Collections.sort(sortedCategories);
+
+        for (int i=0; i<sortedCategories.size(); i++){
+            if (this.categories.get(sortedCategories.get(i)).size()>0){
+                System.out.println(sortedCategories.get(i));
+            }
+//        for (Map.Entry<String, ArrayList<HashMap<String, Integer>>> entry: this.categories.entrySet()) {
+
             ArrayList<String> sortedFood = new ArrayList<>();
-            for(int i=0; i<entry.getValue().size(); i++){
-                for (Map.Entry<String, Integer> foods: entry.getValue().get(i).entrySet()) {
+            for (int j=0; j<this.categories.get(sortedCategories.get(i)).size(); j++) {
+//            for(int i=0; i<entry.getValue().size(); i++){
+                for (Map.Entry<String, Integer> foods : this.categories.get(sortedCategories.get(i)).get(j).entrySet()) {
                     sortedFood.add(foods.getKey());
                 }
+            }
 
 //                System.out.println("   "+ entry.getValue().get(i));
-            }
             Collections.sort(sortedFood);
-            for (int i=0; i<sortedFood.size(); i++){
-                for(int j=0; j<entry.getValue().size(); j++){
-                    if (entry.getValue().get(j).get(sortedFood.get(i))!=null){
-                        System.out.println("   "+sortedFood.get(i)+": "+entry.getValue().get(j).get(sortedFood.get(i)));
+            for (int k=0; k<sortedFood.size(); k++){
+                for(int l=0; l<this.categories.get(sortedCategories.get(i)).size(); l++){
+                    if (this.categories.get(sortedCategories.get(i)).get(l).get(sortedFood.get(k))!=null){
+                        System.out.println("   "+sortedFood.get(k)+": "+this.categories.get(sortedCategories.get(i)).get(l).get(sortedFood.get(k)));
                     }
                 }
 
